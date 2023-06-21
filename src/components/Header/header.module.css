@@ -1,0 +1,50 @@
+@import url(../../vars.css);
+.contacts {
+  width: 100%;
+  padding: 0.7em;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+.contactsList {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.link {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.8em;
+  line-height: 133%;
+  color: var(--mainColor);
+  transition: all 0.3s ease-in-out;
+}
+.link:hover,
+.link:focus {
+  text-decoration: underline;
+}
+.item {
+  margin-right: 1.2em;
+}
+.icon {
+  fill: var(--mainColor);
+  width: 1.7em;
+  margin-right: 0.5em;
+}
+.logo {
+  width: 24em;
+}
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.linksList {
+  display: flex;
+}
+.linkItem {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 1.17em;
+  line-height: 135.7%;
+  text-transform: uppercase;
+}
