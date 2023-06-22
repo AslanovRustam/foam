@@ -20,6 +20,8 @@ html {
   box-sizing: border-box;
   font-family: "Open Sans";
   font-style: normal;
+  font-weight: 600;
+  color: var(--black);
   text-decoration: none;
   list-style: none;
 }
