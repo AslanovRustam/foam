@@ -1,0 +1,62 @@
+.supply {
+  position: relative;
+  background-color: var(--mainColor);
+  height: 63.53em;
+  /* background-image: url(../../images/heroBg.svg); */
+}
+.subTitle {
+  color: var(--grey2);
+  font-size: 1.67em;
+  padding: 4.1em 0 0.6em 0;
+}
+.italic {
+  color: inherit;
+}
+.title {
+  color: var(--white);
+  font-size: 5.34em;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+}
+.btn {
+  margin-top: 3.556em;
+  padding: 0.67em 5.025em;
+  border-radius: 0.5em;
+  color: var(--second);
+  font-size: 1.5em;
+  text-transform: capitalize;
+  border-color: transparent;
+  background: var(--white);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover,
+.btn:focus {
+  background: var(--second);
+  color: var(--white);
+}
+.bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 120em;
+  pointer-events: none;
+}
+.facts {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 97.16em;
+  transform: translateX(50%);
+  border-radius: 2em 2em 0 0;
+  text-align: center;
+  background-color: var(--white);
+}
+.titleFacts {
+  margin-top: 0.71em;
+  font-size: 4em;
+  color: var(--mainColor);
+  line-height: 100%;
+  letter-spacing: 0.05em;
+}

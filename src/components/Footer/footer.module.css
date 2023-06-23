@@ -8,6 +8,10 @@
 }
 .information {
   width: 50em;
+  /* width: 50%; */
+}
+.form {
+  /* width: 65%; */
 }
 .subtitle {
   margin-bottom: 1.5em;
@@ -28,10 +32,11 @@
   text-transform: capitalize;
 }
 .label:nth-child(2n) {
-  margin-top: 31px;
+  margin-top: 1.93em;
 }
 .section {
   display: flex;
+  justify-content: space-between;
 }
 .form {
   display: flex;
@@ -44,7 +49,7 @@
   border-radius: 0.3em;
   border: 0.1em solid rgba(0, 0, 0, 0.12);
   background: var(--white);
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0.1em 0 rgba(0, 0, 0, 0.25);
 }
 .message {
   height: 8em;
@@ -54,12 +59,23 @@
 }
 .btn {
   width: 100%;
-  border-radius: 1em;
+  border-radius: 0.5em;
   padding: 0.5em 0;
   margin-top: -0.5em;
   background: var(--second);
+  border: 0.1em solid transparent;
   color: var(--white);
   font-size: 1.5em;
   text-transform: capitalize;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover,
+.btn:focus {
+  background: var(--white);
+  color: var(--second);
+  border: 0.1em solid var(--second);
+}
+footer {
+  font-size: 1em;
 }

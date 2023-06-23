@@ -1,8 +1,31 @@
 @import url(../../vars.css);
+header {
+  margin-bottom: 2em;
+  border-bottom: 0.1em solid var(--mainColor);
+}
 .contacts {
+  position: relative;
   width: 100%;
   padding: 0.7em 0;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  border-bottom: 0.1em solid rgba(0, 0, 0, 0.25);
+}
+.contacts::before {
+  content: "";
+  position: absolute;
+  bottom: -0.05em;
+  left: -2em;
+  width: 2em;
+  display: block;
+  border-bottom: 0.1em solid rgba(0, 0, 0, 0.25);
+}
+.contacts::after {
+  content: "";
+  position: absolute;
+  bottom: -0.05em;
+  right: -2em;
+  width: 2em;
+  display: block;
+  border-bottom: 0.1em solid rgba(0, 0, 0, 0.25);
 }
 .contactsList {
   display: flex;
@@ -37,6 +60,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0.9em 0;
 }
 .linksList {
   display: flex;

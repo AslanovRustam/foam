@@ -1,5 +1,9 @@
-import React from "react";
+import Supply from "../../components/Supply/Supply";
 
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <>
+      <Supply />
+    </>
+  );
 }
