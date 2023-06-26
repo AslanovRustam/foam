@@ -50,6 +50,7 @@ export default function Footer() {
                 className={`${s.input} ${s.message}`}
                 type="text"
                 name="message"
+                rows={4}
                 value={formValues.message}
                 onChange={handleChange}
               ></textarea>

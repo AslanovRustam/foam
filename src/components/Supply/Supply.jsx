@@ -14,7 +14,7 @@ export default function Supply() {
           WE SUPPLY, CUT AND <br></br> SHAPE FOAM FOR ALL<br></br> APPLICATIONS
         </h2>
         <button type="button" className={s.btn}>
-          CONTACT US
+          <span className={s.btnText}>CONTACT US</span>
         </button>
         <img className={s.bg} src={heroImg} alt="background" />
         <div className={s.facts}>

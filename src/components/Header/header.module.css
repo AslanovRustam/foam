@@ -73,4 +73,24 @@ header {
   line-height: 135.7%;
   text-transform: uppercase;
   cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.linkItem::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.1em;
+  background-color: var(--mainColor);
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.linkItem:hover:after,
+.linkItem:focus:after {
+  transform: translateX(0);
+}
+.linkItem:hover,
+.linkItem:focus {
+  color: var(--mainColor);
 }

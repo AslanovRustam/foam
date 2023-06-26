@@ -7,9 +7,7 @@ import Container from "../../components/Container/Container";
 export default function SharedLayaut() {
   return (
     <>
-      {/* <Container> */}
       <Header />
-      {/* </Container> */}
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>

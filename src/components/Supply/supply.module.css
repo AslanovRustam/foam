@@ -2,7 +2,6 @@
   position: relative;
   background-color: var(--mainColor);
   height: 63.53em;
-  /* background-image: url(../../images/heroBg.svg); */
 }
 .subTitle {
   color: var(--grey2);
@@ -20,6 +19,7 @@
   letter-spacing: 0.1em;
 }
 .btn {
+  position: relative;
   margin-top: 3.556em;
   padding: 0.67em 5.025em;
   border-radius: 0.5em;
@@ -33,9 +33,35 @@
 }
 .btn:hover,
 .btn:focus {
-  background: var(--second);
-  color: var(--white);
+  border-color: var(--white);
 }
+.btn:hover .btnText,
+.btn:focus .btnText {
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn::after,
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  color: var(--white);
+  border-color: var(--white);
+  background-color: var(--mainColor);
+  border-radius: 0.5em;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover:after,
+.btn:focus:after {
+  width: 100%;
+}
+
 .bg {
   position: absolute;
   bottom: 0;

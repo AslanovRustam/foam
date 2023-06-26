@@ -1,3 +1,6 @@
+footer {
+  margin-top: 7.669em;
+}
 .title {
   margin-bottom: 1.335em;
   font-size: 4em;
@@ -51,9 +54,9 @@
   background: var(--white);
   box-shadow: 0 0 0.1em 0 rgba(0, 0, 0, 0.25);
 }
-.message {
+/* .message {
   height: 8em;
-}
+} */
 .formLeft {
   margin-right: 3em;
 }
