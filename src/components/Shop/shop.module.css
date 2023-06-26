@@ -6,6 +6,7 @@
 }
 .item {
   margin: 5.33em 0 7.66em 0;
+  width: 28em;
 }
 .title {
   color: var(--mainColor);
@@ -20,4 +21,79 @@
   font-weight: 600;
   text-decoration-line: underline;
   text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.link:hover,
+.link:focus {
+  color: var(--black);
+  text-decoration-line: unset;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8em;
+}
+.name {
+  margin-top: 1.24em;
+  color: var(--mainColor);
+  font-size: 1.88em;
+  font-weight: 700;
+}
+.description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.34em;
+  line-height: 1.79em;
+  text-transform: capitalize;
+}
+.price {
+  margin: 1em 0 1.4em 0;
+  color: var(--green);
+  font-size: 1.668em;
+  font-weight: 700;
+}
+.btn {
+  position: relative;
+  width: 100%;
+  padding: 0.75em 2.25em;
+  border-radius: 0.8em;
+  background: var(--second);
+  color: var(--white);
+  cursor: pointer;
+}
+.btnText {
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover,
+.btn:focus {
+  border-color: var(--white);
+}
+.btn:hover .btnText,
+.btn:focus .btnText {
+  color: var(--second);
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn::after,
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  border: none;
+  background-color: var(--white);
+  border-radius: 0.5em;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover:after,
+.btn:focus:after {
+  height: 100%;
+  border: 0.1em solid var(--second);
 }

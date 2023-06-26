@@ -13,6 +13,7 @@ code {
 }
 html {
   font-size: 0.833vw;
+  overflow-x: hidden;
 }
 * {
   margin: 0;
