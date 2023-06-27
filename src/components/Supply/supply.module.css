@@ -26,7 +26,7 @@
   color: var(--second);
   font-size: 1.5em;
   text-transform: capitalize;
-  border-color: transparent;
+  border: 0.1em solid transparent;
   background: var(--white);
   cursor: pointer;
   transition: all 0.3s ease-in-out;

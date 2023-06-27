@@ -54,7 +54,7 @@ export default function Footer() {
                 value={formValues.message}
                 onChange={handleChange}
               ></textarea>
-            </label>{" "}
+            </label>
           </div>
           <div className={s.formRight}>
             <label className={s.label}>

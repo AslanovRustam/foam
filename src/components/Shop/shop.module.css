@@ -5,7 +5,7 @@
   align-items: center;
 }
 .item {
-  margin: 5.33em 0 7.66em 0;
+  margin: 5.33em 0 0 0;
   width: 28em;
 }
 .title {
@@ -57,8 +57,10 @@
 .btn {
   position: relative;
   width: 100%;
-  padding: 0.75em 2.25em;
+  padding: 0.56em 0;
   border-radius: 0.8em;
+  border: 0.1em solid transparent;
+  font-size: 1.5em;
   background: var(--second);
   color: var(--white);
   cursor: pointer;

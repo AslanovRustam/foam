@@ -1,3 +1,4 @@
+import Blog from "../../components/Blog/Blog";
 import Customer from "../../components/Customer/Customer";
 import Products from "../../components/Products/Products";
 import Services from "../../components/Services/Services";
@@ -12,6 +13,7 @@ export default function Home() {
       <Products />
       <Services />
       <Shop />
+      <Blog />
     </>
   );
 }
