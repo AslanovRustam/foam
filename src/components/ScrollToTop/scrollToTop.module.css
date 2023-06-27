@@ -1,0 +1,32 @@
+.scrollToTop {
+  position: fixed;
+  right: 1em;
+  /* right: -100%; */
+  bottom: 100vh;
+  border-radius: 50%;
+  padding: 0.5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mainColor);
+  border: 0.1em solid transparent;
+  transition: all 250ms ease-in-out 0s;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+}
+
+.btnShow {
+  composes: scrollToTop;
+  /* right: 1em; */
+  bottom: 2em;
+  opacity: 1;
+}
+.scrollToTop:hover,
+.scrollToTop:focus {
+  border-color: var(--mainColor);
+  background-color: var(--white);
+}
+.scrollToTop img {
+  width: 2em;
+}

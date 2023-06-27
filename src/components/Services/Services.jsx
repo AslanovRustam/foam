@@ -44,7 +44,7 @@ const items = [
 export default function Services() {
   return (
     <Container>
-      <div className={s.services}>
+      <div className={s.services} id="about">
         <h2 className={s.title}>
           OUR MAIN<br></br> SERVICES
         </h2>

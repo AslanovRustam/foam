@@ -17,7 +17,7 @@ export default function Footer() {
     console.log("formValues", formValues);
   };
   return (
-    <footer>
+    <footer id="contact">
       <h2 className={s.title}>
         CONTACT <br></br> INFORMATION
       </h2>

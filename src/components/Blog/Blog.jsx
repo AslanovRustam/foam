@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Container from "../Container/Container";
 import s from "./blog.module.css";
 import blog1 from "../../images/products3.png";
@@ -35,8 +36,10 @@ export default function Blog() {
   return (
     <Container>
       <div className={s.container}>
-        <h2 className={s.title}>OUR SHOP</h2>
-        <span className={s.link}>To shop</span>
+        <h2 className={s.title}>BLOG POSTS</h2>
+        <span className={s.link}>
+          <Link to="/products">To shop</Link>
+        </span>
       </div>
       <ul className={s.list}>
         {items.map(({ id, image, name, description, date }) => (

@@ -94,3 +94,10 @@ header {
 .linkItem:focus {
   color: var(--mainColor);
 }
+a,
+.navLink {
+  color: inherit;
+}
+.active {
+  color: var(--mainColor);
+}

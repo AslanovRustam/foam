@@ -3,6 +3,8 @@ import { ReactComponent as Phone } from "../../images/phone.svg";
 import { ReactComponent as Email } from "../../images/email.svg";
 import logo from "../../images/logo.png";
 import Container from "../Container/Container";
+import { NavLink } from "react-router-dom";
+import ScrollToTopBtn from "../ScrollToTop/ScrollToTop";
 
 export default function Header() {
   return (
@@ -28,13 +30,32 @@ export default function Header() {
         <div className={s.links}>
           <img className={s.logo} src={logo} alt="logo" />
           <ul className={s.linksList}>
-            <li className={s.linkItem}>Home</li>
-            <li className={s.linkItem}>Product & services</li>
-            <li className={s.linkItem}>About RPL</li>
-            <li className={s.linkItem}>Contact US</li>
+            <li className={s.linkItem}>
+              <NavLink
+                className={({ isActive }) => (isActive ? s.active : s.navLink)}
+                to="/"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className={s.linkItem}>
+              <NavLink
+                className={({ isActive }) => (isActive ? s.active : s.navLink)}
+                to="/products"
+              >
+                Product & services
+              </NavLink>
+            </li>
+            <li className={s.linkItem}>
+              <a href="#about">About RPL</a>
+            </li>
+            <li className={s.linkItem}>
+              <a href="#contact">Contact US</a>
+            </li>
           </ul>
         </div>
       </Container>
+      <ScrollToTopBtn />
     </header>
   );
 }

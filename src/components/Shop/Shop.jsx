@@ -4,6 +4,7 @@ import product1 from "../../images/products2.png";
 import product2 from "../../images/products4.png";
 import product3 from "../../images/products1.png";
 import product4 from "../../images/products3.png";
+import { Link } from "react-router-dom";
 const items = [
   {
     id: 1,
@@ -44,7 +45,9 @@ export default function Shop() {
     <Container>
       <div className={s.container}>
         <h2 className={s.title}>OUR SHOP</h2>
-        <span className={s.link}>To shop</span>
+        <span className={s.link}>
+          <Link to="/products">To shop</Link>
+        </span>
       </div>
       <ul className={s.list}>
         {items.map(({ id, image, name, description, price }) => (
@@ -55,9 +58,11 @@ export default function Shop() {
             </p>
             <p className={s.description}>{description}</p>
             <p className={s.price}>{price}</p>
-            <button className={s.btn} type="button">
-              <span className={s.btnText}>Buy now</span>
-            </button>
+            <Link to="/products">
+              <button className={s.btn} type="button">
+                <span className={s.btnText}>Buy now</span>
+              </button>
+            </Link>
           </li>
         ))}
       </ul>
