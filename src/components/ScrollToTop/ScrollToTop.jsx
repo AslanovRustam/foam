@@ -8,9 +8,6 @@ export default function ScrollToTopBtn() {
     const handleScrollBtn = () => {
       const height = window.innerHeight;
       const scrollPosition = window.scrollY;
-      //   console.log("scrollPosition", scrollPosition);
-      //   console.log("height", height);
-      //   console.log("toshow", toshow);
       scrollPosition > height ? setShowBtn(true) : setShowBtn(false);
     };
     window.addEventListener("scroll", handleScrollBtn);
@@ -24,15 +21,11 @@ export default function ScrollToTopBtn() {
   };
 
   return (
-    <>
-      {/* {showBtn && ( */}
-      <div
-        className={`${showBtn ? s.btnShow : s.scrollToTop}`}
-        onClick={handleScrollToTop}
-      >
-        <img src={arrow} alt="arrow up" />
-      </div>
-      {/* )} */}
-    </>
+    <div
+      className={`${showBtn ? s.btnShow : s.scrollToTop}`}
+      onClick={handleScrollToTop}
+    >
+      <img src={arrow} alt="arrow up" />
+    </div>
   );
 }

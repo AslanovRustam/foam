@@ -1,0 +1,46 @@
+footer {
+  margin: 7.669em 0 2em 0;
+}
+.container {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  gap: 2em;
+}
+.title {
+  margin-bottom: 1.335em;
+  text-align: center;
+  font-size: 2.67em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--mainColor);
+}
+.subTitle {
+  font-size: 1.67em;
+  text-transform: capitalize;
+}
+.info,
+.contact {
+  color: var(--grey3);
+  font-size: 1.33em;
+  text-transform: capitalize;
+}
+.info {
+  margin: 0.625em 0 2.375em 0;
+}
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.84em;
+}
+.icon {
+  width: 2.5em;
+  margin-right: 1.25em;
+  fill: var(--mainColor);
+}
+.label {
+  display: flex;
+  flex-direction: column;
+}
+.formBlock {
+  display: flex;
+}
