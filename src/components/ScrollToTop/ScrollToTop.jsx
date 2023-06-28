@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import s from "./scrollToTop.module.css";
 import arrow from "../../images/arrow.png";
+import { ReactComponent as Arrow } from "../../images/arrow.svg";
 
 export default function ScrollToTopBtn() {
   const [showBtn, setShowBtn] = useState(false);
@@ -25,7 +26,7 @@ export default function ScrollToTopBtn() {
       className={`${showBtn ? s.btnShow : s.scrollToTop}`}
       onClick={handleScrollToTop}
     >
-      <img src={arrow} alt="arrow up" />
+      <Arrow className={s.arrow} />
     </div>
   );
 }

@@ -34,13 +34,14 @@ export default function FooterProducts() {
             <li className={s.item}>
               <Telephone className={s.icon} />
               <span className={s.contact}>
-                {" "}
-                0113 243 4358 - Fax: 0113 245 4945
+                <a href="tel:01132434358">0113 243 4358 - Fax: 0113 245 4945</a>
               </span>
             </li>
             <li className={s.item}>
               <Email className={s.icon} />
-              <span className={s.contact}>Sales@pll.co.uk</span>
+              <span className={s.contact}>
+                <a href="mailTo:Sales@pll.co.uk">Sales@pll.co.uk</a>
+              </span>
             </li>
             <li className={s.item}>
               <Clock1 className={s.icon} />
@@ -54,7 +55,7 @@ export default function FooterProducts() {
         </div>
         <form className={s.form} onSubmit={handleSubmit}>
           <label className={s.label}>
-            full Name*
+            full Name
             <input
               className={s.input}
               type="text"
@@ -77,7 +78,7 @@ export default function FooterProducts() {
               />
             </label>{" "}
             <label className={s.label}>
-              Email *
+              Email
               <input
                 className={s.input}
                 type="email"
@@ -88,15 +89,14 @@ export default function FooterProducts() {
             </label>
           </div>
           <label className={s.label}>
-            Message *
-            <textarea
-              className={`${s.input} ${s.message}`}
+            Message
+            <input
+              className={s.input}
               type="text"
               name="message"
-              rows={4}
               value={formValues.message}
               onChange={handleChange}
-            ></textarea>
+            ></input>
           </label>
           <button className={s.btn} type="submit">
             submit

@@ -28,3 +28,13 @@
 .scrollToTop img {
   width: 1.5em;
 }
+.arrow {
+  width: 1em;
+  rotate: 90deg;
+  fill: var(--white);
+  transition: all 250ms ease-in-out 0s;
+}
+.scrollToTop:hover .arrow,
+.scrollToTop:focus .arrow {
+  fill: var(--mainColor);
+}
