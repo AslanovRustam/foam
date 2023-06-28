@@ -30,6 +30,7 @@
 }
 .arrow {
   width: 1em;
+  height: 1em;
   rotate: 90deg;
   fill: var(--white);
   transition: all 250ms ease-in-out 0s;

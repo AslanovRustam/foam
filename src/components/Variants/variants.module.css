@@ -1,0 +1,71 @@
+.variants {
+  width: 24em;
+  height: 100%;
+  background: #fcfcfc;
+  box-shadow: 0 0 0.1em 0 rgba(0, 0, 0, 0.25);
+}
+.list {
+  margin-top: 2.08em;
+}
+.list:first-child {
+  margin-top: -2em;
+  padding-top: 2em;
+}
+.item,
+.itemStar {
+  color: var(--grey4);
+  font-size: 1.75em;
+  margin-bottom: 0.48em;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.item:last-child {
+  padding-bottom: 1.19em;
+  border-bottom: 0.1em solid var(--mainColor);
+}
+.item:hover,
+.item:focus,
+.itemStar:hover,
+.itemStar:focus {
+  color: var(--mainColor);
+}
+.starList {
+  display: flex;
+}
+.itemStar {
+  margin: 1.19em 0;
+}
+.raiting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25em 0;
+  border-radius: 0.833em;
+  background-color: var(--blue);
+}
+.star {
+  width: 3.33em;
+  height: 3.33em;
+  border-radius: 50%;
+  background-color: var(--darkBlue);
+}
+.star:not(:last-child) {
+  margin-right: 0.83em;
+}
+.icon {
+  width: 100%;
+  fill: var(--yellow);
+}
+.raitingTitle,
+.raitingInfo {
+  margin-top: 0.238em;
+  color: #000;
+  text-align: center;
+  font-size: 1.75em;
+  text-transform: capitalize;
+}
+.raitingInfo {
+  margin-top: 1.66em;
+  font-size: 1.5em;
+}

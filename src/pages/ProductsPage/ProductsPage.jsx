@@ -1,5 +1,11 @@
 import React from "react";
+import Container from "../../components/Container/Container";
+import Variants from "../../components/Variants/Variants";
 
 export default function ProductsPage() {
-  return <div>Products</div>;
+  return (
+    // <Container>
+    <Variants />
+    // </Container>
+  );
 }

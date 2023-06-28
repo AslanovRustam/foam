@@ -2,8 +2,7 @@ import { useState } from "react";
 import s from "./footerProducts.module.css";
 import { ReactComponent as Telephone } from "../../images/tele.svg";
 import { ReactComponent as Email } from "../../images/email.svg";
-import { ReactComponent as Clock1 } from "../../images/clock1.svg";
-import { ReactComponent as Clock2 } from "../../images/clock2.svg";
+import { ReactComponent as Clock } from "../../images/clock.svg";
 
 export default function FooterProducts() {
   const [formValues, setFormValue] = useState({
@@ -44,11 +43,11 @@ export default function FooterProducts() {
               </span>
             </li>
             <li className={s.item}>
-              <Clock1 className={s.icon} />
+              <Clock className={s.icon} />
               <span className={s.contact}>Mon – Thurs 7.30am – 4.30pm</span>
             </li>
             <li className={s.item}>
-              <Clock2 className={s.icon} />
+              <Clock className={s.icon} />
               <span className={s.contact}>Fri 7.30am – 3.30pm</span>
             </li>
           </ul>
