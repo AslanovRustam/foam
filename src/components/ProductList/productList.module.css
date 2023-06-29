@@ -1,4 +1,84 @@
+.container {
+  margin-bottom: 8.31em;
+}
+.links {
+  display: flex;
+  align-items: center;
+  color: var(--grey2);
+}
+.active {
+  color: var(--mainColor);
+}
+.navLink {
+  transition: all 0.3s ease-in-out;
+}
+.navLink:hover,
+.navLink:focus {
+  color: var(--mainColor);
+}
 .list {
   display: flex;
   flex-wrap: wrap;
+}
+.item {
+  width: 18.2em;
+  margin: 2em 2.42em 0 0;
+}
+.imgWrapper {
+  margin-bottom: 1.33em;
+}
+.name {
+  margin-bottom: 0.44em;
+  text-align: center;
+  color: var(--second);
+  font-size: 1.5em;
+  line-height: 122%;
+  text-transform: capitalize;
+}
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mainColor);
+  text-align: center;
+  font-size: 1.166em;
+  line-height: 157%;
+  text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.selectText {
+  color: inherit;
+}
+.arrowDown,
+.arrowLeft {
+  width: 1.33em;
+  margin-top: 0.2em;
+  padding: 0 0.35em;
+  stroke: var(--mainColor);
+  rotate: -90deg;
+  transition: all 0.3s ease-in-out;
+}
+.arrowLeft {
+  stroke: var(--grey2);
+}
+.select:hover,
+.select:focus {
+  scale: 1.1;
+}
+.select:hover .arrowDown,
+.select:focus .arrowDown {
+  scale: 1.5;
+  animation: animArrow 2s ease-in-out 0.1s infinite;
+}
+@keyframes animArrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
