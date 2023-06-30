@@ -1,10 +1,13 @@
 import s from "./searchForm.module.css";
 import { useState, useEffect } from "react";
+import { ReactComponent as ArrowDown } from "../../images/arrowDown.svg";
 
 export default function SearchForm({ options, setSelectedPriceOption }) {
+  const [showOptions, setShowOptions] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
+    setShowOptions(!showOptions);
   };
 
   useEffect(() => {
@@ -16,20 +19,24 @@ export default function SearchForm({ options, setSelectedPriceOption }) {
   };
 
   return (
-    <form>
-      <label>
-        <span>Price</span>
-        <select value={selectedOption} onChange={handleOptionChange}>
-          {options.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-          {/* <option value="Standart">Standart</option>
-          <option value="Low to High">Low to High</option>
-          <option value="High to Low">High to Low</option> */}
-        </select>
-      </label>
-    </form>
+    <div className={s.form}>
+      <span className={s.name}>Price</span>
+      <button
+        type="button"
+        className={s.option}
+        value={selectedOption}
+        onClick={handleOptionChange}
+      >
+        {options[0]}
+        <ArrowDown className={s.arrowDown} />
+      </button>
+      <ul className={`${showOptions ? s.show : s.list}`}>
+        {options.map((option) => (
+          <li key={option} value={option}>
+            {option}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

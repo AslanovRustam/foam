@@ -10,6 +10,10 @@ export default function ProductList({
 }) {
   return (
     <div className={s.container}>
+      <SearchForm
+        options={options}
+        setSelectedPriceOption={setSelectedPriceOption}
+      />
       <p className={s.links}>
         <NavLink to="/" className={s.navLink}>
           Home
@@ -23,10 +27,7 @@ export default function ProductList({
         </NavLink>
         <ArrowDown className={s.arrowLeft} />
       </p>
-      <SearchForm
-        options={options}
-        setSelectedPriceOption={setSelectedPriceOption}
-      />
+
       <ul className={s.list}>
         {items.map(({ image, id, name }) => (
           <li className={s.item} key={id}>

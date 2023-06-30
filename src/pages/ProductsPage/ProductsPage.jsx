@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import s from "./productPage.module.css";
 import Variants from "../../components/Variants/Variants";
 import ProductList from "../../components/ProductList/ProductList";
@@ -31,21 +31,21 @@ const items = [
     id: 1,
     image: first,
     name: "Sofa Cushion Foam Cut to Size",
-    price: 1,
+    price: 12,
     popularity: 1,
   },
   {
     id: 2,
     image: second,
     name: "Custom Shape – Post Template",
-    price: 2,
+    price: 28,
     popularity: 2,
   },
   {
     id: 3,
     image: third,
     name: "Foam Circles & Cylinders Cut To Size",
-    price: 3,
+    price: 8,
     popularity: 3,
   },
   {
@@ -193,13 +193,27 @@ const items = [
 const options = ["Standart", "Low to High", "High to Low"];
 
 export default function ProductsPage() {
+  const [sortedItems, setSortedItems] = useState(items);
   const [selectedPriceOption, setSelectedPriceOption] = useState(options[0]);
-  console.log(selectedPriceOption);
+  const [selectedPopularityOption, setSelectedPopularityOption] = useState(
+    options[0]
+  );
+
+  useEffect(() => {
+    if (selectedPriceOption === options[1]) {
+      const sorted = [...sortedItems].sort((a, b) => a.price - b.price);
+      setSortedItems(sorted);
+    } else if (selectedPriceOption === options[2]) {
+      const sorted = [...sortedItems].sort((a, b) => b.price - a.price);
+      setSortedItems(sorted);
+    } else setSortedItems(items);
+  }, [selectedPriceOption]);
+
   return (
     <div className={s.container}>
       <Variants />
       <ProductList
-        items={items}
+        items={sortedItems}
         options={options}
         setSelectedPriceOption={setSelectedPriceOption}
       />
