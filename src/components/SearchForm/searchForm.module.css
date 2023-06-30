@@ -13,16 +13,23 @@
 }
 .list {
   position: absolute;
-  bottom: -5em;
-  left: 10em;
+  bottom: -5.5em;
+  left: 8.4em;
+  padding: 0.5em 2.1em;
+  border-radius: 0.5em;
   opacity: 0;
+  border: 0.1em solid var(--mainColor);
   pointer-events: none;
+  transform: translateY(-10%);
+  transition: all 0.3s ease-in-out;
 }
 .show {
   composes: list;
   opacity: 1;
+  transform: translateY(0);
+  pointer-events: unset;
 }
-.option {
+.btn {
   display: flex;
   align-items: center;
   border-radius: 3.125em;
@@ -36,8 +43,8 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.option:focus,
-.option:hover {
+.btn:focus,
+.btn:hover {
   border-color: var(--mainColor);
   color: var(--mainColor);
 }
@@ -47,10 +54,18 @@
   stroke: var(--black2);
   transition: all 0.3s ease-in-out;
 }
-.option:focus .arrowDown,
-.option:hover .arrowDown {
+.btn:focus .arrowDown,
+.btn:hover .arrowDown {
   stroke: var(--mainColor);
   animation: animArrow 2s ease-in-out 0.1s infinite;
+}
+.option {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.option:hover,
+.option:focus {
+  color: var(--mainColor);
 }
 
 @keyframes animArrow {

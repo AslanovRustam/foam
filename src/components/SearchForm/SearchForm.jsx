@@ -5,17 +5,17 @@ import { ReactComponent as ArrowDown } from "../../images/arrowDown.svg";
 export default function SearchForm({ options, setSelectedPriceOption }) {
   const [showOptions, setShowOptions] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
+  const handleOptionChange = () => {
     setShowOptions(!showOptions);
   };
 
   useEffect(() => {
-    handleSubmit();
+    setSelectedPriceOption(selectedOption);
   }, [selectedOption]);
 
-  const handleSubmit = () => {
-    setSelectedPriceOption(selectedOption);
+  const handleOptionClick = (option) => {
+    setSelectedOption(option);
+    setShowOptions(!showOptions);
   };
 
   return (
@@ -23,7 +23,7 @@ export default function SearchForm({ options, setSelectedPriceOption }) {
       <span className={s.name}>Price</span>
       <button
         type="button"
-        className={s.option}
+        className={s.btn}
         value={selectedOption}
         onClick={handleOptionChange}
       >
@@ -32,7 +32,12 @@ export default function SearchForm({ options, setSelectedPriceOption }) {
       </button>
       <ul className={`${showOptions ? s.show : s.list}`}>
         {options.map((option) => (
-          <li key={option} value={option}>
+          <li
+            className={s.option}
+            key={option}
+            value={option}
+            onClick={() => handleOptionClick(option)}
+          >
             {option}
           </li>
         ))}
