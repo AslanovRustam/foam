@@ -1,19 +1,36 @@
 import { NavLink } from "react-router-dom";
 import s from "./productList.module.css";
 import { ReactComponent as ArrowDown } from "../../images/arrowDown.svg";
+import SelectForm from "../SearchForm/SelectForm";
 import SearchForm from "../SearchForm/SearchForm";
 
 export default function ProductList({
   items,
+  selectedPriceOption,
   setSelectedPriceOption,
   options,
+  setSelectedPopularityOption,
+  selectedPopularityOption,
+  setFilter,
+  filter,
 }) {
   return (
     <div className={s.container}>
-      <SearchForm
-        options={options}
-        setSelectedPriceOption={setSelectedPriceOption}
-      />
+      <div className={s.filterContainer}>
+        <SelectForm
+          title="Price"
+          options={options}
+          selectedPriceOption={selectedPriceOption}
+          setSelectedPriceOption={setSelectedPriceOption}
+        />
+        <SelectForm
+          title="Popularity"
+          options={options}
+          selectedPriceOption={selectedPopularityOption}
+          setSelectedPriceOption={setSelectedPopularityOption}
+        />
+        <SearchForm title="Search" setFilter={setFilter} filter={filter} />
+      </div>
       <p className={s.links}>
         <NavLink to="/" className={s.navLink}>
           Home

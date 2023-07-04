@@ -71,6 +71,13 @@
   scale: 1.5;
   animation: animArrow 2s ease-in-out 0.1s infinite;
 }
+
+.filterContainer {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  gap: 5em;
+}
 @keyframes animArrow {
   0% {
     transform: translateY(0);
