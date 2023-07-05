@@ -1,0 +1,26 @@
+.form {
+  margin: 2em 0;
+}
+.label {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  align-items: center;
+  color: var(--black);
+  font-size: 1.167em;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.label:not(:last-child) {
+  margin-bottom: 1.71em;
+}
+.name {
+  margin-right: 1.5em;
+}
+.input {
+  padding: 0.3em 0.2em;
+  border-radius: 0.357em;
+  border: 0.1em solid var(--grey2);
+  outline: none;
+  background: var(--white);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+}

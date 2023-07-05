@@ -52,10 +52,12 @@ export default function ProductList({
               <img className={s.image} src={image} alt={name} />
             </div>
             <p className={s.name}>{name}</p>
-            <p className={s.select}>
-              <span className={s.selectText}>Select options</span>
-              <ArrowDown className={s.arrowDown} />
-            </p>
+            <NavLink to={`/products/${name}`}>
+              <p className={s.select}>
+                <span className={s.selectText}>Select options</span>
+                <ArrowDown className={s.arrowDown} />
+              </p>
+            </NavLink>
           </li>
         ))}
       </ul>

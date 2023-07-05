@@ -15,7 +15,7 @@ export default function SelectForm({
   const handleOptionChange = () => {
     setShowOptions(!showOptions);
   };
-  // console.log("selectedPriceOption", selectedPriceOption);
+
   useEffect(() => {
     setSelectedPriceOption(selectedOption);
   }, [selectedOption]);

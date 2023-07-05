@@ -1,12 +1,30 @@
-import s from "./header.module.css";
+import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import Container from "../Container/Container";
+import ScrollToTopBtn from "../ScrollToTop/ScrollToTop";
 import { ReactComponent as Phone } from "../../images/phone.svg";
 import { ReactComponent as Email } from "../../images/email.svg";
 import logo from "../../images/logo.png";
-import Container from "../Container/Container";
-import { NavLink } from "react-router-dom";
-import ScrollToTopBtn from "../ScrollToTop/ScrollToTop";
+import s from "./header.module.css";
 
 export default function Header() {
+  const [shoukdRiderect, setShouldRiderect] = useState(false);
+  useEffect(() => {
+    const checkURL = () => {
+      const currentPath = window.location.pathname.includes("products");
+      // console.log("currentPath:", currentPath);
+      setShouldRiderect(currentPath);
+    };
+    checkURL();
+    const handleURLChange = () => {
+      checkURL();
+    };
+    window.addEventListener("popstate", handleURLChange);
+    return () => {
+      window.removeEventListener("popstate", handleURLChange);
+    };
+  }, []);
+  // console.log("shoukdRiderect", shoukdRiderect);
   return (
     <header>
       <Container>
@@ -47,7 +65,18 @@ export default function Header() {
               </NavLink>
             </li>
             <li className={s.linkItem}>
+              {/* {shoukdRiderect ? (
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? s.active : s.navLink
+                  }
+                  to="/"
+                >
+                  About RPL
+                </NavLink>
+              ) : ( */}
               <a href="#about">About RPL</a>
+              {/* )} */}
             </li>
             <li className={s.linkItem}>
               <a href="#contact">Contact US</a>
