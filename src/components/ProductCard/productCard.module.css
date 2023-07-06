@@ -37,6 +37,7 @@
 }
 .image {
   width: 34.42em;
+  height: fit-content;
 }
 .descriptionContainer {
   margin-left: 1.67em;
@@ -58,7 +59,7 @@
 .description {
   padding: 3.125em 3.125em 4.5em 3.125em;
   border-radius: 1.125em;
-  border: 0.1em solid var(--grey6);
+  border: 0.2em solid var(--grey6);
 }
 .subTitle {
   margin-bottom: 0.75em;

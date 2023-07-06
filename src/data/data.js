@@ -29,7 +29,7 @@ export const items = [
     name: "Sofa Cushion Foam Cut to Size",
     price: 12,
     popularity: 10,
-    sides: { width: 0, length: 0, depth: 0 },
+    sides: { width: 1, length: 1, depth: 1 },
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ export const items = [
     name: "Custom Shape – Post Template",
     price: 28,
     popularity: 21,
-    sides: { width: 0, length: 0, depth: 0, d: 0, e: 0, f: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1, e: 1, f: 1 },
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ export const items = [
     name: "Foam Circles & Cylinders Cut To Size",
     price: 8,
     popularity: 3,
-    sides: { width: 0, depth: 0 },
+    sides: { width: 1, depth: 1 },
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ export const items = [
     name: "Foam Semi-Circle Cut to Size",
     price: 4,
     popularity: 4,
-    sides: { width: 0, depth: 0 },
+    sides: { width: 1, depth: 1 },
   },
   {
     id: 5,
@@ -61,7 +61,7 @@ export const items = [
     name: "Foam Wedge Backs Cut to Size",
     price: 5,
     popularity: 5,
-    sides: { width: 0, length: 0, depth: 0, d: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1 },
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ export const items = [
     name: "Boat Mattress Cushion Foam Cut to Size",
     price: 6,
     popularity: 6,
-    sides: { width: 0, length: 0, depth: 0, d: 0, e: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1, e: 1 },
   },
   {
     id: 7,
@@ -77,7 +77,7 @@ export const items = [
     name: "5 Sided Trapezoid Foam Cut to Size",
     price: 7,
     popularity: 7,
-    sides: { width: 0, length: 0, depth: 0, d: 0, e: 0, f: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1, e: 1, f: 1 },
   },
   {
     id: 8,
@@ -85,7 +85,7 @@ export const items = [
     name: "Foam Clipped Bolster Shapes Cut to size",
     price: 8,
     popularity: 8,
-    sides: { width: 0, length: 0, depth: 0, d: 0, e: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1, e: 1 },
   },
   {
     id: 9,
@@ -93,7 +93,7 @@ export const items = [
     name: "Foam Clipped Window Seat Shape Cut to Size",
     price: 9,
     popularity: 9,
-    sides: { width: 0, length: 0, depth: 0, d: 0, e: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1, e: 1 },
   },
   {
     id: 10,
@@ -101,7 +101,7 @@ export const items = [
     name: "L-Shaped Foam Cut to Size",
     price: 10,
     popularity: 10,
-    sides: { width: 0, length: 0, depth: 0, d: 0, e: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1, e: 1 },
   },
   {
     id: 11,
@@ -109,7 +109,7 @@ export const items = [
     name: "T-Shaped Foam Cut to Size",
     price: 11,
     popularity: 11,
-    sides: { width: 0, length: 0, depth: 0, d: 0, e: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1, e: 1 },
   },
   {
     id: 12,
@@ -117,7 +117,7 @@ export const items = [
     name: "L-Shaped Curved Foam Cut to Size",
     price: 12,
     popularity: 12,
-    sides: { width: 0, length: 0, depth: 0, d: 0, e: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1, e: 1 },
   },
   {
     id: 13,
@@ -125,7 +125,7 @@ export const items = [
     name: "T-Shaped Curved Foam Cut to Size",
     price: 13,
     popularity: 13,
-    sides: { width: 0, length: 0, depth: 0, d: 0, e: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1, e: 1 },
   },
   {
     id: 14,
@@ -133,7 +133,7 @@ export const items = [
     name: "Caravan Cushion Foam Cut to Size",
     price: 14,
     popularity: 14,
-    sides: { width: 0, length: 0, depth: 0, d: 0, e: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1, e: 1 },
   },
   {
     id: 15,
@@ -141,7 +141,7 @@ export const items = [
     name: "Foam Wedge Seats Cut to Size",
     price: 15,
     popularity: 15,
-    sides: { width: 0, length: 0, depth: 0, d: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1 },
   },
   {
     id: 16,
@@ -149,7 +149,7 @@ export const items = [
     name: "Equal Sided Tapers Cut to Size",
     price: 16,
     popularity: 16,
-    sides: { width: 0, length: 0, depth: 0, d: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1 },
   },
   {
     id: 17,
@@ -157,7 +157,7 @@ export const items = [
     name: "Trapezium-Shaped Foam Cut to Size",
     price: 17,
     popularity: 17,
-    sides: { width: 0, length: 0, depth: 0, d: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1 },
   },
   {
     id: 18,
@@ -165,7 +165,7 @@ export const items = [
     name: "Foam Round-Tops Cut to Size",
     price: 18,
     popularity: 18,
-    sides: { width: 0, length: 0, depth: 0, d: 0 },
+    sides: { width: 1, length: 1, depth: 1, d: 1 },
   },
   {
     id: 19,
@@ -173,7 +173,7 @@ export const items = [
     name: "Foam Equilateral Triangles Cut to Size",
     price: 19,
     popularity: 19,
-    sides: { width: 0, length: 0, depth: 0 },
+    sides: { width: 1, length: 1, depth: 1 },
   },
   {
     id: 20,
@@ -181,7 +181,7 @@ export const items = [
     name: "Foam Wedges Cut to Size",
     price: 20,
     popularity: 20,
-    sides: { width: 0, length: 0, depth: 0 },
+    sides: { width: 1, length: 1, depth: 1 },
   },
   {
     id: 21,
@@ -189,7 +189,7 @@ export const items = [
     name: "Foam Cube Cut to Size",
     price: 21,
     popularity: 21,
-    sides: { width: 0, length: 0, depth: 0 },
+    sides: { width: 1, length: 1, depth: 1 },
   },
   {
     id: 22,
@@ -197,7 +197,7 @@ export const items = [
     name: "Bull Nosed Foam Cut to Size",
     price: 22,
     popularity: 22,
-    sides: { width: 0, length: 0, depth: 0 },
+    sides: { width: 1, length: 1, depth: 1 },
   },
   {
     id: 23,
@@ -205,6 +205,6 @@ export const items = [
     name: "Curved Sofa Cushion Foam Cut to Size",
     price: 23,
     popularity: 1,
-    sides: { width: 0, length: 0, depth: 0 },
+    sides: { width: 1, length: 1, depth: 1 },
   },
 ];

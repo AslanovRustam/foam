@@ -1,0 +1,68 @@
+.modalBackDrop {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1em);
+  transition: all 2s ease-in-out;
+  overflow: auto;
+  /* z-index: 51; */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.opacity {
+  visibility: visible;
+  opacity: 1;
+}
+.container {
+  position: relative;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 1.5em;
+  background: var(--white);
+  transform: translateY(-100vh);
+  transition: all 0.5s ease-in-out;
+}
+.containerActive {
+  transform: translateY(0);
+}
+.overvlow {
+  overflow: hidden;
+}
+.iconContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.67em;
+  margin: 1.33em;
+  border-radius: 0.416em;
+  background: #e9edee;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.icon {
+  width: 1.8em;
+}
+.iconContainer:hover,
+.iconContainer:focus {
+  background-color: var(--mainColor);
+}
+.formDataContainer {
+  margin: 2em;
+}
+.formDataContainer p {
+  color: var(--second);
+  font-size: 2em;
+  font-weight: 700;
+  line-height: normal;
+}
