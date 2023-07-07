@@ -34,6 +34,7 @@
 }
 .cardContainer {
   display: flex;
+  padding: 0 6.67em 0 0;
 }
 .image {
   width: 34.42em;
@@ -61,7 +62,7 @@
   border-radius: 1.125em;
   border: 0.2em solid var(--grey6);
 }
-.subTitle {
+/* .subTitle {
   margin-bottom: 0.75em;
   color: var(--mainColor);
   text-align: center;
@@ -90,4 +91,4 @@
   background: var(--white);
   color: var(--grey2);
   border: 0.1em solid var(--grey2);
-}
+} */

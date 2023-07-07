@@ -1,0 +1,71 @@
+.btnContainer {
+  display: flex;
+}
+.selection {
+  margin-right: 1.725em;
+}
+.btn {
+  border: 0.2em solid transparent;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.foamSelection {
+  width: 14.21em;
+}
+.foamTitle {
+  color: var(--mainColor);
+  margin-bottom: 1.333em;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.title {
+  margin-top: 0.78em;
+  color: var(--second);
+  text-align: center;
+  font-size: 2.25em;
+  font-weight: 600;
+  line-height: 101%;
+  text-transform: capitalize;
+}
+
+.subTitle {
+  padding: 1.714em 0;
+  font-size: 1.167em;
+  line-height: normal;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.2em;
+}
+.item {
+  text-align: center;
+  border: 0.1em solid transparent;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.item:hover,
+.item:focus {
+  border-color: var(--mainColor);
+}
+.code {
+  color: var(--second);
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: capitalize;
+}
+.color {
+  font-size: 1.333em;
+  font-weight: 400;
+  line-height: 135%;
+  text-transform: capitalize;
+}
+.active {
+  border-color: var(--mainColor);
+}

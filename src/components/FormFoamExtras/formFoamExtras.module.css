@@ -1,0 +1,33 @@
+.title {
+  color: var(--mainColor);
+  margin-bottom: 1.333em;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.subTitle {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: normal;
+}
+.wrapper {
+  width: 15.88em;
+}
+.extras {
+  width: 15.88em;
+}
+.extrasCost {
+  margin-top: 0.78em;
+  color: var(--second);
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.description {
+  margin: 1.714em;
+  font-size: 1.167em;
+  font-weight: 400;
+  text-transform: capitalize;
+}

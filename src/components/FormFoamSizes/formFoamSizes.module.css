@@ -1,0 +1,59 @@
+.subTitleMeasure {
+  margin-bottom: 0.75em;
+  color: var(--mainColor);
+  font-size: 1.5075em;
+  font-weight: 600;
+  line-height: normal;
+}
+.sizeListContainer {
+  display: flex;
+  margin-bottom: 2.25em;
+}
+.sizeItems {
+  padding: 0.14em 0.714em;
+  margin-right: 0.57em;
+  border-radius: 0.286em;
+  border: 0.1em solid var(--mainColor);
+  background: var(--mainColor);
+  color: var(--white);
+  text-align: center;
+  font-size: 1.17em;
+  line-height: normal;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.inActiveSize {
+  composes: sizeItems;
+  background: var(--white);
+  color: var(--grey2);
+  border: 0.1em solid var(--grey2);
+}
+.label {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  color: var(--black);
+  font-size: 1.167em;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.label:not(:last-child) {
+  margin-bottom: 1.14em;
+}
+.name {
+  margin-right: 1.5em;
+}
+.input {
+  padding: 0.3em 0.2em;
+  border-radius: 0.357em;
+  border: 0.1em solid var(--grey2);
+  outline: none;
+  background: var(--white);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+.input:hover,
+.input:focus,
+.input:active {
+  border-color: var(--mainColor);
+}

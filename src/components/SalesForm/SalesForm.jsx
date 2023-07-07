@@ -1,6 +1,11 @@
 import { useState } from "react";
-import s from "./salesForm.module.css";
 import Modal from "../Modal/Modal";
+import FormFoamSizes from "../FormFoamSizes/FormFoamSizes";
+import FormFoamType from "../FormFoamType/FormFoamType";
+import FormFoamExtras from "../FormFoamExtras/FormFoamExtras";
+import s from "./salesForm.module.css";
+
+const sizes = ["CM", "INCH", "MM"];
 
 export default function SalesForm({ item }) {
   const [step, setStep] = useState(1);
@@ -12,8 +17,17 @@ export default function SalesForm({ item }) {
     d: "",
     e: "",
     f: "",
+    size: sizes[0],
+    foamType: "standart",
+    foamCode: "",
+    extras: "",
+    dacronWrap: "",
   });
+  // const [size, setSize] = useState(sizes[0]);
 
+  const sizeChoice = (e) => {
+    setFormData({ ...formData, size: e.target.getAttribute("name") });
+  };
   const togleModal = () => {
     setShowmodal(!showModal);
   };
@@ -36,93 +50,37 @@ export default function SalesForm({ item }) {
   const handlePreviousStep = () => {
     setStep(step - 1);
   };
-
+  // console.log(formData);
   const renderForm = () => {
     switch (step) {
       case 1:
         return (
-          <>
-            {item.sides?.width && (
-              <label className={s.label}>
-                <span className={s.name}>Side A (Width)</span>
-                <input
-                  className={s.input}
-                  name="width"
-                  value={formData.width}
-                  onChange={handleChange}
-                  pattern="^(\+?[0-9.\(\)\-\s]*)$"
-                  title="value may contain only numbers"
-                  required
-                />
-              </label>
-            )}
-            {item.sides?.length && (
-              <label className={s.label}>
-                <span className={s.name}>Side B (Length)</span>
-                <input
-                  className={s.input}
-                  name="length"
-                  value={formData.length}
-                  onChange={handleChange}
-                />
-              </label>
-            )}
-            {item.sides?.depth && (
-              <label className={s.label}>
-                <span className={s.name}>Side C (Depth)</span>
-                <input
-                  className={s.input}
-                  name="depth"
-                  value={formData.depth}
-                  onChange={handleChange}
-                />
-              </label>
-            )}
-            {item.sides?.d && (
-              <label className={s.label}>
-                <span className={s.name}>Side D </span>
-                <input
-                  className={s.input}
-                  name="d"
-                  value={formData.d}
-                  onChange={handleChange}
-                />
-              </label>
-            )}
-            {item.sides?.e && (
-              <label className={s.label}>
-                <span className={s.name}>Side E</span>
-                <input
-                  className={s.input}
-                  name="e"
-                  value={formData.e}
-                  onChange={handleChange}
-                />
-              </label>
-            )}
-            {item.sides?.f && (
-              <label className={s.label}>
-                <span className={s.name}>Side F</span>
-                <input
-                  className={s.input}
-                  name="f"
-                  value={formData.f}
-                  onChange={handleChange}
-                />
-              </label>
-            )}
-          </>
+          <FormFoamSizes
+            item={item}
+            formData={formData}
+            sizes={sizes}
+            sizeChoice={sizeChoice}
+            handleChange={handleChange}
+          />
         );
       case 2:
         return (
-          <Modal
-            onClose={togleModal}
-            showModal={showModal}
-            item={item}
-            formData={formData}
-          />
+          <>
+            <Modal
+              onClose={togleModal}
+              showModal={showModal}
+              item={item}
+              formData={formData}
+            />
+            <FormFoamType
+              foamType={formData.foamType}
+              formData={formData}
+              setFormData={setFormData}
+            />
+          </>
         );
-
+      case 3:
+        return <FormFoamExtras formData={formData} setFormData={setFormData} />;
       default:
         return null;
     }
@@ -130,19 +88,33 @@ export default function SalesForm({ item }) {
   return (
     <form className={s.form}>
       {renderForm()}
-      <p className={s.totalContainer}>
+      <div className={s.totalContainer}>
         <span className={s.total}>
           Total: &nbsp;<span className={s.cost}>£9.00</span>
         </span>
-        {step > 1 && (
-          <button className={s.btn} type="button" onClick={handlePreviousStep}>
-            Back
+        <div className={s.btnContainer}>
+          {step > 1 && (
+            <button
+              className={s.btnBack}
+              type="submit"
+              onClick={handlePreviousStep}
+            >
+              Back
+            </button>
+          )}
+          <button className={s.btn} type="button" onClick={handleNextStep}>
+            Next
           </button>
-        )}
-        <button className={s.btn} type="button" onClick={handleNextStep}>
-          Next
-        </button>
-      </p>
+        </div>
+      </div>
+      <div className={s.informationContainer}>
+        <p className={s.subTitleMeasure}>Information</p>
+        <p className={s.infoContainer}>
+          Our 6lb Recon Foam is a very firm grade, used for hard-wearing seats.
+          It’s ideal for bar seating and stools, church kneelers, gym mats and
+          other hard-wearing commercial furniture.
+        </p>
+      </div>
       <div className={s.information}>
         <p className={s.subTitle}>Free Postage - 3 day delivery</p>
         <p className={s.info}>
