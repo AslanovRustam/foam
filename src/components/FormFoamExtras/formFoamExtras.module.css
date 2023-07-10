@@ -13,6 +13,9 @@
 }
 .wrapper {
   width: 15.88em;
+  cursor: pointer;
+  border: 0.1em solid transparent;
+  transition: all 0.3s ease-in-out;
 }
 .extras {
   width: 15.88em;
@@ -30,4 +33,35 @@
   font-size: 1.167em;
   font-weight: 400;
   text-transform: capitalize;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+.item {
+  text-align: center;
+  border: 0.1em solid transparent;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.item:hover,
+.item:focus {
+  border-color: var(--mainColor);
+}
+.code {
+  color: var(--second);
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: capitalize;
+}
+.color {
+  font-size: 1.333em;
+  font-weight: 400;
+  line-height: 135%;
+  text-transform: capitalize;
+}
+.active {
+  border-color: var(--mainColor);
 }

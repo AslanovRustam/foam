@@ -1,14 +1,16 @@
+import { extras } from "../../data/standartFoams";
 import s from "./formFoamExtras.module.css";
 import extrasImg from "../../images/extras.png";
-import extraImg from "../../images/extra.png";
-import { extras } from "../../data/standartFoams";
 
 export default function FormFoamExtras({ formData, setFormData }) {
   return (
     <div>
       <p className={s.title}>Pick your extras</p>
       <p className={s.subTitle}>Extras are a great way to add to your foam</p>
-      <div className={s.wrapper}>
+      <div
+        className={`${s.wrapper} ${formData.extras ? s.active : ""}`}
+        onClick={() => setFormData({ ...formData, extras: !formData.extras })}
+      >
         <img className={s.extras} src={extrasImg} alt="extra" />
         <p className={s.extrasCost}>
           add Stockinette <br></br>(+£3.00)
@@ -27,10 +29,10 @@ export default function FormFoamExtras({ formData, setFormData }) {
         {extras.map(({ id, image, color, code }) => (
           <li
             className={`${s.item} ${
-              formData.foamCode === code ? s.active : ""
+              formData.dacronWrap === code ? s.active : ""
             }`}
             key={id}
-            onClick={() => setFormData({ ...formData, foamCode: code })}
+            onClick={() => setFormData({ ...formData, dacronWrap: code })}
           >
             <img className={s.image} src={image} alt={color} />
             <p className={s.code}>{code}</p>

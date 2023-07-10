@@ -24,9 +24,8 @@
 .container {
   position: relative;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   margin: auto;
   border-radius: 1.5em;
   background: var(--white);

@@ -3,8 +3,9 @@ import { ReactComponent as ArrowDown } from "../../images/arrowDown.svg";
 import { ReactComponent as Star } from "../../images/star.svg";
 import s from "./productCard.module.css";
 import SalesForm from "../SalesForm/SalesForm";
+import Descriptions from "../Descriptions/Descriptions";
 
-export default function ProductCard({ name, item }) {
+export default function ProductCard({ name, item, items }) {
   return (
     <div className={s.container}>
       <p className={s.links}>
@@ -41,6 +42,7 @@ export default function ProductCard({ name, item }) {
           </div>
         </div>
       </div>
+      <Descriptions items={items} />
     </div>
   );
 }

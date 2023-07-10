@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Remal Patel",
+    "review": "My sofa cushions were delivered very quickly and well made with Dacron and netting. The sofa is now better than it was new. Great all round advice and service.",
+    "rate": 5
+  },
+  {
+    "id": 2,
+    "name": "Emal Rahel",
+    "review": "My sofa cushions were delivered very quickly and well made with Dacron and netting. The sofa is now better than it was new. Great all round advice and service.",
+    "rate": 5
+  },
+  {
+    "id": 3,
+    "name": "Anna Skoti",
+    "review": "My sofa cushions were delivered very quickly and well made with Dacron and netting. The sofa is now better than it was new. Great all round advice and service.",
+    "rate": 4
+  }
+]

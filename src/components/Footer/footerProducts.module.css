@@ -61,9 +61,9 @@ footer {
   outline: none;
   transition: all 0.3s ease-in-out;
 }
-.input:focus {
-  outline: 0.1em solid var(--mainColor);
-  border-color: transparent;
+.input:focus,
+.input:hover {
+  border-color: var(--mainColor);
 }
 .btn {
   padding: 0.56em 1.68em;

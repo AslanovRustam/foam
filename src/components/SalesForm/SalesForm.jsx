@@ -4,6 +4,7 @@ import FormFoamSizes from "../FormFoamSizes/FormFoamSizes";
 import FormFoamType from "../FormFoamType/FormFoamType";
 import FormFoamExtras from "../FormFoamExtras/FormFoamExtras";
 import s from "./salesForm.module.css";
+import { NavLink } from "react-router-dom";
 
 const sizes = ["CM", "INCH", "MM"];
 
@@ -23,7 +24,6 @@ export default function SalesForm({ item }) {
     extras: "",
     dacronWrap: "",
   });
-  // const [size, setSize] = useState(sizes[0]);
 
   const sizeChoice = (e) => {
     setFormData({ ...formData, size: e.target.getAttribute("name") });
@@ -41,13 +41,16 @@ export default function SalesForm({ item }) {
     if (!formData.width && !formData.length) {
       return;
     }
-    if (step === 1) {
+    if (step === 1 || step === 3) {
       togleModal();
     }
+    // console.log(step);
+
     setStep(step + 1);
   };
 
   const handlePreviousStep = () => {
+    // console.log(step);
     setStep(step - 1);
   };
   // console.log(formData);
@@ -81,6 +84,15 @@ export default function SalesForm({ item }) {
         );
       case 3:
         return <FormFoamExtras formData={formData} setFormData={setFormData} />;
+      case 4:
+        return (
+          <Modal
+            onClose={togleModal}
+            showModal={showModal}
+            item={item}
+            formData={formData}
+          />
+        );
       default:
         return null;
     }
@@ -88,25 +100,35 @@ export default function SalesForm({ item }) {
   return (
     <form className={s.form}>
       {renderForm()}
-      <div className={s.totalContainer}>
-        <span className={s.total}>
-          Total: &nbsp;<span className={s.cost}>£9.00</span>
-        </span>
-        <div className={s.btnContainer}>
-          {step > 1 && (
-            <button
-              className={s.btnBack}
-              type="submit"
-              onClick={handlePreviousStep}
-            >
-              Back
+      {step < 4 ? (
+        <div className={s.totalContainer}>
+          <span className={s.total}>
+            Total: &nbsp;<span className={s.cost}>£9.00</span>
+          </span>
+          <div className={s.btnContainer}>
+            {step > 1 && (
+              <button
+                className={s.btnBack}
+                type="button"
+                onClick={handlePreviousStep}
+              >
+                Back
+              </button>
+            )}
+            <button className={s.btn} type="button" onClick={handleNextStep}>
+              {step === 3 ? "Add" : "Next"}
             </button>
-          )}
-          <button className={s.btn} type="button" onClick={handleNextStep}>
-            Next
-          </button>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className={s.thanksContainer}>
+          <p className={s.thanks}>Thank You</p>
+          <p className={s.guide}>Manager will connect you soon</p>
+          <div className={s.btnGoToShop}>
+            <NavLink to="/products">Go to shop</NavLink>
+          </div>
+        </div>
+      )}
       <div className={s.informationContainer}>
         <p className={s.subTitleMeasure}>Information</p>
         <p className={s.infoContainer}>

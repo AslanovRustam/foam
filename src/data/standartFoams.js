@@ -79,7 +79,7 @@ export const extras = [
   {
     id: 19,
     image: extra,
-    color: "Peach",
-    code: "395 Foam",
+    color: "blue",
+    code: "393 Foam",
   },
 ];

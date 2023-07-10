@@ -3,8 +3,6 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import SharedLayaut from "./pages/SharedLayaut/SharedLayaut";
 import Home from "./pages/Home/Home";
 import { items } from "./data/data";
-// import ProductsPage from "./pages/ProductsPage/ProductsPage";
-// import Product from "./pages/Product/Product";
 
 const ProductsPage = lazy(() => import("./pages/ProductsPage/ProductsPage"));
 const Product = lazy(() => import("./pages/Product/Product"));
