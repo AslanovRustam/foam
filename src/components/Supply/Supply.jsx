@@ -13,9 +13,11 @@ export default function Supply() {
         <h2 className={s.title}>
           WE SUPPLY, CUT AND <br></br> SHAPE FOAM FOR ALL<br></br> APPLICATIONS
         </h2>
-        <button type="button" className={s.btn}>
-          <span className={s.btnText}>CONTACT US</span>
-        </button>
+        <a href="#contact">
+          <button type="button" className={s.btn}>
+            <span className={s.btnText}>CONTACT US</span>
+          </button>
+        </a>
         <img className={s.bg} src={heroImg} alt="background" />
         <div className={s.facts}>
           <p className={s.titleFacts}>RPL QUICK FACTS</p>

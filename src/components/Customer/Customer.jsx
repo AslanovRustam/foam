@@ -3,6 +3,7 @@ import s from "./customer.module.css";
 import service from "../..//images/service.png";
 import reputation from "../..//images/reputation.png";
 import tech from "../..//images/tech.png";
+import { NavLink } from "react-router-dom";
 
 export default function Customer() {
   return (
@@ -31,9 +32,11 @@ export default function Customer() {
         <p className={s.titleService}>
           FOR EXCELLENT CUSTOMER SERVICE AND <br></br> EXPERIENCE
         </p>
-        <button className={s.btn} type="button">
-          Shop now
-        </button>
+        <NavLink to="/products">
+          <button className={s.btn} type="button">
+            Shop now
+          </button>
+        </NavLink>
       </div>
       <Container>
         <ul className={s.reputation}>
