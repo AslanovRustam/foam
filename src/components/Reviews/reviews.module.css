@@ -33,11 +33,10 @@
   align-items: center;
   margin-left: 0.89em;
 }
-.starContainerAdd {
+/* .starContainerAdd {
   margin: 0.67em 0;
-}
-.star,
-.starEmpty {
+} */
+.star {
   width: 1em;
   fill: var(--yellow);
 }
@@ -57,6 +56,7 @@
   gap: 2em;
 }
 .label {
+  position: relative;
   display: flex;
   flex-direction: column;
   font-size: 1.333em;
@@ -96,4 +96,10 @@
   background: var(--white);
   color: var(--second);
   border: 0.1em solid var(--second);
+}
+.error {
+  position: absolute;
+  bottom: -1.3em;
+  font-size: 0.8em;
+  color: red;
 }

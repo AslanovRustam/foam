@@ -1,0 +1,32 @@
+.starContainerAdd {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0.67em 0;
+}
+
+.starEmpty {
+  width: 1.5em;
+  stroke: var(--grey);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.starFill {
+  fill: var(--yellow);
+  stroke: transparent;
+}
+.starEmpty:hover,
+.starEmpty:focus {
+  fill: var(--yellow);
+  stroke: transparent;
+}
+.starFill:hover,
+.starFill:focus {
+  fill: transparent;
+  stroke: var(--grey);
+}
+.error {
+  position: absolute;
+  left: 8em;
+  color: red;
+}

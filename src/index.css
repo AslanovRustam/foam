@@ -32,33 +32,3 @@ video {
   max-width: 100%;
   height: auto;
 }
-/* @media (orientation: landscape) and (min-aspect-ratio: 1920 / 853) {
-  html {
-    font-size: 0.65vw;
-  }
-}
-@media (orientation: landscape) and (min-aspect-ratio: 15 / 7) {
-  html {
-    font-size: 0.67vw;
-  }
-}
-@media (orientation: landscape) and (min-aspect-ratio: 640 / 311) {
-  html {
-    font-size: 0.7vw;
-  }
-}
-@media (orientation: landscape) and (min-aspect-ratio: 80 / 41) {
-  html {
-    font-size: 0.73vw;
-  }
-}
-@media (orientation: landscape) and (min-aspect-ratio: 1920 / 1007) {
-  html {
-    font-size: 0.76vw;
-  }
-}
-@media (orientation: landscape) and (min-aspect-ratio: 384 / 209) {
-  html {
-    font-size: 0.8vw;
-  }
-} */

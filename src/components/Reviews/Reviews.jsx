@@ -1,18 +1,25 @@
-import s from "./reviews.module.css";
+import { useEffect, useState } from "react";
+import { nanoid } from "nanoid";
+import StarRating from "../StarRaiting/StarRating";
 import reviewsData from "../../data/reviews.json";
 import { ReactComponent as Star } from "../../images/star.svg";
-import { useEffect, useState } from "react";
+import s from "./reviews.module.css";
 
 export default function Reviews() {
   const [reviews, setReviews] = useState(
-    localStorage.getItem("reviews") ?? reviewsData
+    JSON.parse(localStorage.getItem("reviews")) ?? reviewsData
   );
-  console.log(reviews);
   const [formValues, setFormValue] = useState({
     name: "",
     email: "",
     review: "",
     rate: 0,
+  });
+  const [showErrors, setShowErrors] = useState({
+    name: false,
+    email: false,
+    review: false,
+    rate: false,
   });
   useEffect(() => {
     localStorage.setItem("reviews", JSON.stringify(reviews));
@@ -23,19 +30,38 @@ export default function Reviews() {
   };
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    setReviews([...reviews, { ...formValues, id: 23113 }]);
+    const newShowErrors = {};
+    let hasError = false;
 
-    setFormValue({
-      name: "",
-      email: "",
-      review: "",
-      rate: 0,
+    Object.keys(formValues).forEach((inputKey) => {
+      if (!formValues[inputKey]) {
+        newShowErrors[inputKey] = true;
+        hasError = true;
+      } else {
+        newShowErrors[inputKey] = false;
+      }
     });
+
+    setShowErrors(newShowErrors);
+    console.log("hasError", hasError);
+    console.log("newShowErrors", newShowErrors);
+
+    if (!hasError) {
+      setReviews([...reviews, { ...formValues, id: nanoid() }]);
+      console.log("formValues", formValues);
+      setFormValue({
+        name: "",
+        email: "",
+        review: "",
+        rate: 0,
+      });
+    }
   };
+
   return (
     <div className={s.container}>
       <p className={s.title}>Latest Foam Cut To Size & Product Reviews</p>
-      {reviews.map(({ id, name, rate, review }) => (
+      {reviews?.map(({ id, name, rate, review }) => (
         <li className={s.item} key={id}>
           <div className={s.name}>
             <span>{name}</span>
@@ -51,13 +77,15 @@ export default function Reviews() {
       <div className={s.formContainer}>
         <p className={s.name}>Your review </p>
         <p className={s.review}>Your rating *</p>
-        <div className={s.starContainerAdd}>
-          <Star className={s.starEmpty} />
-          <Star className={s.starEmpty} />
-          <Star className={s.starEmpty} />
-          <Star className={s.starEmpty} />
-          <Star className={s.starEmpty} />
-        </div>
+        {/* //////////////////star rating component//////////////////////////// */}
+        <StarRating
+          starSelected={formValues.rate}
+          totalStars={5}
+          onRate={setFormValue}
+          formValues={formValues}
+          showErrors={showErrors}
+        />
+        {/* //////////////////star rating component//////////////////////////// */}
         <form className={s.form} onSubmit={handleSubmit}>
           <div className={s.inputContainer}>
             <label className={s.label}>
@@ -69,6 +97,9 @@ export default function Reviews() {
                 value={formValues.name}
                 onChange={handleChange}
               />
+              {showErrors.name && (
+                <span className={s.error}>This field is required</span>
+              )}
             </label>
             <label className={s.label}>
               Email*
@@ -79,6 +110,9 @@ export default function Reviews() {
                 value={formValues.email}
                 onChange={handleChange}
               />
+              {showErrors.email && (
+                <span className={s.error}>This field is required</span>
+              )}
             </label>
           </div>
           <label className={s.label}>
@@ -91,6 +125,9 @@ export default function Reviews() {
               value={formValues.review}
               onChange={handleChange}
             ></textarea>
+            {showErrors.review && (
+              <span className={s.error}>This field is required</span>
+            )}
           </label>
           <button className={s.btn} type="submit">
             submit

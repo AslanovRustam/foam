@@ -44,16 +44,14 @@ export default function SalesForm({ item }) {
     if (step === 1 || step === 3) {
       togleModal();
     }
-    // console.log(step);
 
     setStep(step + 1);
   };
 
   const handlePreviousStep = () => {
-    // console.log(step);
     setStep(step - 1);
   };
-  // console.log(formData);
+
   const renderForm = () => {
     switch (step) {
       case 1:
@@ -124,9 +122,9 @@ export default function SalesForm({ item }) {
         <div className={s.thanksContainer}>
           <p className={s.thanks}>Thank You</p>
           <p className={s.guide}>Manager will connect you soon</p>
-          <div className={s.btnGoToShop}>
-            <NavLink to="/products">Go to shop</NavLink>
-          </div>
+          <NavLink to="/products">
+            <div className={s.btnGoToShop}>Go to shop</div>
+          </NavLink>
         </div>
       )}
       <div className={s.informationContainer}>
