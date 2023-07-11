@@ -12,7 +12,6 @@
   backdrop-filter: blur(1em);
   transition: all 2s ease-in-out;
   overflow: auto;
-  /* z-index: 51; */
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
@@ -25,7 +24,6 @@
   position: relative;
   display: flex;
   justify-content: center;
-  /* flex-direction: column; */
   margin: auto;
   border-radius: 1.5em;
   background: var(--white);
@@ -64,4 +62,7 @@
   font-size: 2em;
   font-weight: 700;
   line-height: normal;
+}
+.image {
+  width: 50em;
 }

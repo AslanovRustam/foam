@@ -39,6 +39,7 @@ footer {
   fill: var(--mainColor);
 }
 .label {
+  position: relative;
   display: flex;
   flex-direction: column;
   font-size: 1.75em;
@@ -52,7 +53,7 @@ footer {
 }
 .input {
   width: 100%;
-  margin: 0.48em 0;
+  margin: 0.7em 0;
   padding: 0.5em 0.2em;
   border-radius: 0.3em;
   font-size: 1em;
@@ -81,4 +82,10 @@ footer {
   background: var(--white);
   color: var(--second);
   border: 0.1em solid var(--second);
+}
+.error {
+  font-size: 0.5em;
+  position: absolute;
+  top: 2.3em;
+  color: red;
 }

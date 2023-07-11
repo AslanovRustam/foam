@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import s from "./productPage.module.css";
 import Variants from "../../components/Variants/Variants";
 import ProductList from "../../components/ProductList/ProductList";
+import s from "./productPage.module.css";
 
 const options = ["Standart", "Low to High", "High to Low"];
 

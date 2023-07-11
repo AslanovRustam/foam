@@ -11,7 +11,8 @@
   font-weight: 400;
   line-height: normal;
 }
-.list {
+.list,
+.show {
   position: absolute;
   bottom: -6.8em;
   width: 100%;
@@ -26,7 +27,6 @@
   transition: all 0.3s ease-in-out;
 }
 .show {
-  composes: list;
   opacity: 1;
   transform: translateY(0);
   pointer-events: unset;

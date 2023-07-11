@@ -48,7 +48,7 @@ export default function Reviews() {
 
     if (!hasError) {
       setReviews([...reviews, { ...formValues, id: nanoid() }]);
-      console.log("formValues", formValues);
+
       setFormValue({
         name: "",
         email: "",

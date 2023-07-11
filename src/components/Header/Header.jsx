@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Container from "../Container/Container";
 import ScrollToTopBtn from "../ScrollToTop/ScrollToTop";
@@ -8,23 +7,6 @@ import logo from "../../images/logo.png";
 import s from "./header.module.css";
 
 export default function Header() {
-  const [shoukdRiderect, setShouldRiderect] = useState(false);
-  useEffect(() => {
-    const checkURL = () => {
-      const currentPath = window.location.pathname.includes("products");
-      // console.log("currentPath:", currentPath);
-      setShouldRiderect(currentPath);
-    };
-    checkURL();
-    const handleURLChange = () => {
-      checkURL();
-    };
-    window.addEventListener("popstate", handleURLChange);
-    return () => {
-      window.removeEventListener("popstate", handleURLChange);
-    };
-  }, []);
-  // console.log("shoukdRiderect", shoukdRiderect);
   return (
     <header>
       <Container>
@@ -46,7 +28,10 @@ export default function Header() {
           </ul>
         </div>
         <div className={s.links}>
-          <img className={s.logo} src={logo} alt="logo" />
+          <NavLink to="/">
+            <img className={s.logo} src={logo} alt="logo" />
+          </NavLink>
+
           <ul className={s.linksList}>
             <li className={s.linkItem}>
               <NavLink
@@ -65,18 +50,7 @@ export default function Header() {
               </NavLink>
             </li>
             <li className={s.linkItem}>
-              {/* {shoukdRiderect ? (
-                <NavLink
-                  className={({ isActive }) =>
-                    isActive ? s.active : s.navLink
-                  }
-                  to="/"
-                >
-                  About RPL
-                </NavLink>
-              ) : ( */}
               <a href="#about">About RPL</a>
-              {/* )} */}
             </li>
             <li className={s.linkItem}>
               <a href="#contact">Contact US</a>
@@ -88,3 +62,20 @@ export default function Header() {
     </header>
   );
 }
+
+// const [shoukdRiderect, setShouldRiderect] = useState(false);
+// useEffect(() => {
+//   const checkURL = () => {
+//     const currentPath = window.location.pathname.includes("products");
+
+//     setShouldRiderect(currentPath);
+//   };
+//   checkURL();
+//   const handleURLChange = () => {
+//     checkURL();
+//   };
+//   window.addEventListener("popstate", handleURLChange);
+//   return () => {
+//     window.removeEventListener("popstate", handleURLChange);
+//   };
+// }, []);

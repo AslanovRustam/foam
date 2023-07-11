@@ -6,6 +6,7 @@ export default function FormFoamSizes({
   sizes,
   sizeChoice,
   handleChange,
+  showErrors,
 }) {
   return (
     <>
@@ -47,6 +48,9 @@ export default function FormFoamSizes({
             title="value may contain only numbers"
             required
           />
+          {showErrors.width && (
+            <span className={s.error}>Please, fill width</span>
+          )}
         </label>
       )}
       {item.sides?.length && (
@@ -59,6 +63,9 @@ export default function FormFoamSizes({
             onChange={handleChange}
             required
           />
+          {showErrors.length && (
+            <span className={s.error}>Please, fill length</span>
+          )}
         </label>
       )}
       {item.sides?.depth && (
@@ -71,6 +78,9 @@ export default function FormFoamSizes({
             onChange={handleChange}
             required
           />
+          {showErrors.depth && (
+            <span className={s.error}>Please, fill depth</span>
+          )}
         </label>
       )}
       {item.sides?.d && (
@@ -83,6 +93,9 @@ export default function FormFoamSizes({
             onChange={handleChange}
             required
           />
+          {showErrors.d && (
+            <span className={s.error}>This field is required</span>
+          )}
         </label>
       )}
       {item.sides?.e && (
@@ -95,6 +108,9 @@ export default function FormFoamSizes({
             onChange={handleChange}
             required
           />
+          {showErrors.e && (
+            <span className={s.error}>This field is required</span>
+          )}
         </label>
       )}
       {item.sides?.f && (
@@ -107,6 +123,9 @@ export default function FormFoamSizes({
             onChange={handleChange}
             required
           />
+          {showErrors.f && (
+            <span className={s.error}>This field is required</span>
+          )}
         </label>
       )}
     </>

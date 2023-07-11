@@ -11,13 +11,42 @@ export default function FooterProducts() {
     message: "",
     email: "",
   });
+  const [showErrors, setShowErrors] = useState({
+    fullName: false,
+    phone: false,
+    message: false,
+    email: false,
+  });
   const handleChange = (evt) => {
     const { name, value } = evt.target;
     setFormValue({ ...formValues, [name]: value });
   };
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    console.log("formValues", formValues);
+
+    const newShowErrors = {};
+    let hasError = false;
+
+    Object.keys(formValues).forEach((inputKey) => {
+      if (!formValues[inputKey]) {
+        newShowErrors[inputKey] = true;
+        hasError = true;
+      } else {
+        newShowErrors[inputKey] = false;
+      }
+    });
+
+    setShowErrors(newShowErrors);
+
+    if (!hasError) {
+      console.log("formValues", formValues);
+      setFormValue({
+        fullName: "",
+        phone: "",
+        message: "",
+        email: "",
+      });
+    }
   };
   return (
     <footer id="contact">
@@ -62,6 +91,9 @@ export default function FooterProducts() {
               value={formValues.fullName}
               onChange={handleChange}
             />
+            {showErrors.fullName && (
+              <span className={s.error}>This field is required</span>
+            )}
           </label>
           <div className={s.formBlock}>
             <label className={s.label}>
@@ -75,7 +107,10 @@ export default function FooterProducts() {
                 value={formValues.phone}
                 onChange={handleChange}
               />
-            </label>{" "}
+              {showErrors.phone && (
+                <span className={s.error}>This field is required</span>
+              )}
+            </label>
             <label className={s.label}>
               Email
               <input
@@ -85,6 +120,9 @@ export default function FooterProducts() {
                 value={formValues.email}
                 onChange={handleChange}
               />
+              {showErrors.email && (
+                <span className={s.error}>This field is required</span>
+              )}
             </label>
           </div>
           <label className={s.label}>
@@ -95,7 +133,10 @@ export default function FooterProducts() {
               name="message"
               value={formValues.message}
               onChange={handleChange}
-            ></input>
+            />
+            {showErrors.message && (
+              <span className={s.error}>This field is required</span>
+            )}
           </label>
           <button className={s.btn} type="submit">
             submit

@@ -1,13 +1,9 @@
-import { useState } from "react";
 import s from "./searchForm.module.css";
 import { ReactComponent as Search } from "../../images/search.svg";
 
 export default function SearchForm({ title, setFilter, filter }) {
-  //   const [search, setSearch] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setFilter(search);
-    // setSearch("");
   };
   return (
     <div className={s.form}>

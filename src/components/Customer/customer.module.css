@@ -57,9 +57,6 @@
   margin: 7.67em 0;
 }
 .reputationItem {
-  /* display: flex;
-  justify-content: space-between;
-  margin-bottom: 4.67em; */
   display: grid;
   grid-template-columns: 0.8fr 1fr 28em;
   gap: 8.5em;

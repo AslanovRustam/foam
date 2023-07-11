@@ -1,5 +1,4 @@
 .container {
-  /* margin-bottom: 8.31em; */
   padding: 0 0 0 1.5em;
 }
 .links {
@@ -63,33 +62,3 @@
   border-radius: 1.125em;
   border: 0.2em solid var(--grey6);
 }
-/* .subTitle {
-  margin-bottom: 0.75em;
-  color: var(--mainColor);
-  text-align: center;
-  font-size: 1.34em;
-  font-weight: 600;
-  line-height: normal;
-}
-.sizeListContainer {
-  display: flex;
-}
-.sizeItems {
-  padding: 0.14em 0.714em;
-  margin-right: 0.57em;
-  border-radius: 0.286em;
-  border: 0.1em solid var(--mainColor);
-  background: var(--mainColor);
-  color: var(--white);
-  text-align: center;
-  font-size: 1.17em;
-  line-height: normal;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-.inActiveSize {
-  composes: sizeItems;
-  background: var(--white);
-  color: var(--grey2);
-  border: 0.1em solid var(--grey2);
-} */

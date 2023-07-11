@@ -11,11 +11,8 @@ footer {
 }
 .information {
   width: 50em;
-  /* width: 50%; */
 }
-.form {
-  /* width: 65%; */
-}
+
 .subtitle {
   margin-bottom: 1.5em;
   font-size: 2em;
@@ -87,6 +84,3 @@ footer {
   color: var(--second);
   border: 0.1em solid var(--second);
 }
-/* footer {
-  font-size: 1em;
-} */

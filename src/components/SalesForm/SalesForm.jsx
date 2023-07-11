@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { NavLink, useParams } from "react-router-dom";
 import Modal from "../Modal/Modal";
 import FormFoamSizes from "../FormFoamSizes/FormFoamSizes";
 import FormFoamType from "../FormFoamType/FormFoamType";
 import FormFoamExtras from "../FormFoamExtras/FormFoamExtras";
 import s from "./salesForm.module.css";
-import { NavLink } from "react-router-dom";
 
 const sizes = ["CM", "INCH", "MM"];
 
@@ -24,6 +24,18 @@ export default function SalesForm({ item }) {
     extras: "",
     dacronWrap: "",
   });
+  const [showErrors, setShowErrors] = useState({});
+
+  const { name } = useParams();
+
+  useEffect(() => {
+    const { sides } = item;
+    const newErrorObject = { ...sides };
+    for (const key of Object.keys(newErrorObject)) {
+      newErrorObject[key] = false;
+    }
+    setShowErrors(newErrorObject);
+  }, [name]);
 
   const sizeChoice = (e) => {
     setFormData({ ...formData, size: e.target.getAttribute("name") });
@@ -38,14 +50,27 @@ export default function SalesForm({ item }) {
   };
 
   const handleNextStep = () => {
-    if (!formData.width && !formData.length) {
-      return;
-    }
-    if (step === 1 || step === 3) {
-      togleModal();
-    }
+    const newShowErrors = {};
+    let hasError = false;
 
-    setStep(step + 1);
+    Object.keys(showErrors).forEach((inputKey) => {
+      if (formData[inputKey].trim() === "") {
+        newShowErrors[inputKey] = true;
+        hasError = true;
+      } else {
+        newShowErrors[inputKey] = false;
+      }
+    });
+
+    setShowErrors(newShowErrors);
+
+    if (!hasError) {
+      if (step === 1 || step === 3) {
+        togleModal();
+      }
+
+      setStep(step + 1);
+    }
   };
 
   const handlePreviousStep = () => {
@@ -62,6 +87,7 @@ export default function SalesForm({ item }) {
             sizes={sizes}
             sizeChoice={sizeChoice}
             handleChange={handleChange}
+            showErrors={showErrors}
           />
         );
       case 2:
@@ -95,6 +121,7 @@ export default function SalesForm({ item }) {
         return null;
     }
   };
+
   return (
     <form className={s.form}>
       {renderForm()}
