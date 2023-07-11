@@ -10,7 +10,7 @@ In this section, you can choose the best foam for you and your needs.
 
 ## Product page
 
-Here you can enter your measurements of your cushion/seats/foam mattresses and whatever else you need so we can custom-make foam products to fit you.
+At multi-step form you can enter your measurements of your cushion/seats/foam mattresses and whatever else you need so we can custom-make foam products to fit you.
 ![alt text](src/images/readme_form.jpg "description")
 
 ## Feedback form
