@@ -66,3 +66,8 @@
 .image {
   width: 50em;
 }
+@media screen and (max-width: 426px) {
+  .container {
+    font-size: 1.5em;
+  }
+}
