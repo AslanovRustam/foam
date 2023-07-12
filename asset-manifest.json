@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/foam/static/css/main.10e1c199.css",
-    "main.js": "/foam/static/js/main.3ea198e6.js",
-    "static/css/50.8571c826.chunk.css": "/foam/static/css/50.8571c826.chunk.css",
+    "main.css": "/foam/static/css/main.d5f1d564.css",
+    "main.js": "/foam/static/js/main.d1787562.js",
+    "static/css/50.96da0019.chunk.css": "/foam/static/css/50.96da0019.chunk.css",
     "static/js/50.beba4d62.chunk.js": "/foam/static/js/50.beba4d62.chunk.js",
-    "static/css/510.c5309827.chunk.css": "/foam/static/css/510.c5309827.chunk.css",
-    "static/js/510.f43188a5.chunk.js": "/foam/static/js/510.f43188a5.chunk.js",
+    "static/css/510.6cab6101.chunk.css": "/foam/static/css/510.6cab6101.chunk.css",
+    "static/js/510.3b7abf14.chunk.js": "/foam/static/js/510.3b7abf14.chunk.js",
     "static/media/heroBg.png": "/foam/static/media/heroBg.e83b98a0cb011bacb502.png",
     "static/media/products1.png": "/foam/static/media/products1.e0df859f8da29b034634.png",
     "static/media/yearsBg.svg": "/foam/static/media/yearsBg.a7da0411d2d53b7572082d47d5bdf210.svg",
@@ -48,15 +48,15 @@
     "static/media/clock.svg": "/foam/static/media/clock.ddd1c5cd6744f0e064c5204f3489569b.svg",
     "static/media/arrow.svg": "/foam/static/media/arrow.c528caf774aae2398781d79a3a4d304d.svg",
     "static/media/arrowDown.svg": "/foam/static/media/arrowDown.e7fa5d03193964244145117dbfd669ae.svg",
-    "main.10e1c199.css.map": "/foam/static/css/main.10e1c199.css.map",
-    "main.3ea198e6.js.map": "/foam/static/js/main.3ea198e6.js.map",
-    "50.8571c826.chunk.css.map": "/foam/static/css/50.8571c826.chunk.css.map",
+    "main.d5f1d564.css.map": "/foam/static/css/main.d5f1d564.css.map",
+    "main.d1787562.js.map": "/foam/static/js/main.d1787562.js.map",
+    "50.96da0019.chunk.css.map": "/foam/static/css/50.96da0019.chunk.css.map",
     "50.beba4d62.chunk.js.map": "/foam/static/js/50.beba4d62.chunk.js.map",
-    "510.c5309827.chunk.css.map": "/foam/static/css/510.c5309827.chunk.css.map",
-    "510.f43188a5.chunk.js.map": "/foam/static/js/510.f43188a5.chunk.js.map"
+    "510.6cab6101.chunk.css.map": "/foam/static/css/510.6cab6101.chunk.css.map",
+    "510.3b7abf14.chunk.js.map": "/foam/static/js/510.3b7abf14.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.10e1c199.css",
-    "static/js/main.3ea198e6.js"
+    "static/css/main.d5f1d564.css",
+    "static/js/main.d1787562.js"
   ]
 }
