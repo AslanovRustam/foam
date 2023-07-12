@@ -43,8 +43,6 @@ export default function Reviews() {
     });
 
     setShowErrors(newShowErrors);
-    console.log("hasError", hasError);
-    console.log("newShowErrors", newShowErrors);
 
     if (!hasError) {
       setReviews([...reviews, { ...formValues, id: nanoid() }]);

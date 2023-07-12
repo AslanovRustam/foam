@@ -101,3 +101,21 @@ a,
 .active {
   color: var(--mainColor);
 }
+
+@media screen and (max-width: 426px) {
+  header {
+    font-size: 4em;
+  }
+  .linksList {
+    font-size: 0.7em;
+  }
+  .linkItem {
+    margin: 1em 0.9em;
+  }
+  .logo {
+    width: auto;
+  }
+  .links {
+    display: block;
+  }
+}

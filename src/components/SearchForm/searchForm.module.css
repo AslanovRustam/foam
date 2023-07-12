@@ -113,3 +113,11 @@
     transform: translateY(0);
   }
 }
+@media screen and (max-width: 426px) {
+  .show {
+    z-index: 1;
+  }
+  .form {
+    margin: 0;
+  }
+}

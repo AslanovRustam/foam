@@ -24,3 +24,8 @@
 .infoBold {
   font-weight: 600;
 }
+@media screen and (max-width: 426px) {
+  .container {
+    font-size: 1.5em;
+  }
+}

@@ -58,3 +58,8 @@
   font-size: 1.67em;
   line-height: 140%;
 }
+@media screen and (max-width: 426px) {
+  .container {
+    font-size: 1.5em;
+  }
+}

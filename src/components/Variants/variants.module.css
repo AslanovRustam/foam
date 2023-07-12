@@ -1,6 +1,5 @@
 .variants {
   width: 30em;
-
   margin-top: -1.9em;
   background: #fcfcfc;
   box-shadow: 0 0 0.1em 0 rgba(0, 0, 0, 0.25);
@@ -68,4 +67,9 @@
 .raitingInfo {
   margin-top: 1.66em;
   font-size: 1.5em;
+}
+@media screen and (max-width: 426px) {
+  .variants {
+    font-size: 1.5em;
+  }
 }

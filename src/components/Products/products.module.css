@@ -32,3 +32,8 @@
 .bg {
   margin-bottom: -0.35em;
 }
+@media screen and (max-width: 426px) {
+  .titleHappy {
+    font-size: 5em;
+  }
+}

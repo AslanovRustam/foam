@@ -89,3 +89,12 @@ footer {
   top: 2.3em;
   color: red;
 }
+@media screen and (max-width: 426px) {
+  footer {
+    font-size: 1.5em;
+  }
+  .btn {
+    font-size: 3em;
+    width: 100%;
+  }
+}

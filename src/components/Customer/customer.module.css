@@ -74,3 +74,18 @@
   font-size: 1.28em;
   line-height: 140%;
 }
+@media screen and (max-width: 426px) {
+  .btn {
+    margin-top: 1em;
+    font-size: 5em;
+  }
+  .reputation {
+    font-size: 2em;
+    margin: 4em 0;
+  }
+  .reputationItem {
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1em;
+    margin-bottom: 2em;
+  }
+}

@@ -62,3 +62,13 @@
   border-radius: 1.125em;
   border: 0.2em solid var(--grey6);
 }
+@media screen and (max-width: 426px) {
+  .links {
+    font-size: 2em;
+  }
+  .cardContainer {
+    font-size: 2em;
+    flex-direction: column;
+    padding: 0 1em 0 0;
+  }
+}

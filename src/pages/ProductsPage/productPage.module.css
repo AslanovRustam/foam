@@ -2,3 +2,8 @@
   display: grid;
   grid-template-columns: 0.5fr 1.4fr;
 }
+@media screen and (max-width: 426px) {
+  .container {
+    font-size: 1.5em;
+  }
+}

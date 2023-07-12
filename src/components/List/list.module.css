@@ -56,3 +56,11 @@
     transform: translateY(0);
   }
 }
+@media screen and (max-width: 426px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .item {
+    width: auto;
+  }
+}
