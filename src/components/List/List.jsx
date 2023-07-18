@@ -12,7 +12,7 @@ export default function List({ items }) {
           </div>
           <p className={s.name}>{name}</p>
           <NavLink to={`/products/${name}`}>
-            <p className={s.select}>
+            <p className={s.select} onClick={() => window.scrollTo(0, 0)}>
               <span className={s.selectText}>Select options</span>
               <ArrowDown className={s.arrowDown} />
             </p>

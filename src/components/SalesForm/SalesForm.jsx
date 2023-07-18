@@ -68,7 +68,7 @@ export default function SalesForm({ item }) {
       if (step === 1 || step === 3) {
         togleModal();
       }
-
+      window.scrollTo(0, 0);
       setStep(step + 1);
     }
   };
